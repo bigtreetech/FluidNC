@@ -86,6 +86,7 @@ namespace MotorDrivers {
 
         if (_disable_pin.defined()) {
             _disable_pin.setAttr(Pin::Attr::Output);
+            _disable_pin.synchronousWrite(1);
         }
     }
 
