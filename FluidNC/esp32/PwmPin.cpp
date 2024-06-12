@@ -15,11 +15,11 @@
 
 //Use XTAL clock if possible to avoid timer frequency error when setting APB clock < 80 Mhz
 //Need to be fixed in ESP-IDF
-#if SOC_LEDC_SUPPORT_XTAL_CLOCK
-#    define LEDC_DEFAULT_CLK LEDC_USE_XTAL_CLK
-#else
+// #if SOC_LEDC_SUPPORT_XTAL_CLOCK
+// #    define LEDC_DEFAULT_CLK LEDC_USE_XTAL_CLK
+// #else
 #    define LEDC_DEFAULT_CLK LEDC_AUTO_CLK
-#endif
+// #endif
 
 #if CONFIG_IDF_TARGET_ESP32  // ESP32/PICO-D4
 #    include "esp32/rom/gpio.h"
